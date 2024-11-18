@@ -42,6 +42,8 @@
   - [Beyond the Onion](#beyond-the-onion)
 - [🏁 Getting Started ](#-getting-started-)
   - [Prerequisites Knowledge ](#prerequisites-knowledge-)
+  - [Get source code and run the application ](#get-source-code-and-run-the-application-)
+  - [Instructions for testing the application:](#instructions-for-testing-the-application)
 - [🎉 Acknowledgments ](#-acknowledgments-)
 
 ## 🧐 Problem Statement <a name="problem-statement"></a>
@@ -147,18 +149,46 @@ These instructions will help you get a copy of the project up and running on you
 - Flask
 - pygeoapi
 
+### Get source code and run the application <a name="get-source-code-and-run-the-application"></a>
+
 Clone the repository:
 ```bash
 https://github.com/nitheesh-me/pygeoapi-glassonion-auth.git
 cd pygeoapi-glassonion-auth
 git checkout poc
+cp .env.sample .env
 ```
+
+Edit the `.env` file and add the following information:
+
+You must have a Github OAuth application to run the application. Create a new application at [Github Settings Developer](https://github.com/settings/developers)
+
+```bash
+PORT=5000
+FLASK_SECRET_KEY=superdupersupersecretkey
+GITHUB_OAUTH_CLIENT_ID="<your-github-oauth-client-id>"
+GITHUB_OAUTH_CLIENT_SECRET="<your-github-oauth-client-secret>"
+OAUTHLIB_INSECURE_TRANSPORT=true
+
 
 Start the application using Docker:
 
 ```bash
 docker compose build & docker compose up
 ```
+
+### Instructions for testing the application:
+
+- Open the browser and navigate to `http://localhost:5000/`
+- Landing page will be displayed. (No authentication required)
+- Try collections endpoint, will be redirected to login page.
+  - User credentials: `user1:password1`
+  - After successful login, the user will be redirected to the collections page.
+  - Refresh the page, Notice NO redirection to the login page.
+- currently, no link for `logout` is provided, but it can be accessed at `http://localhost:5000/account/logout`
+- Try the admin link on top right, will be redirected to oauth2 login (Github) page.
+  - After successful login, the user will be redirected to the admin config page.
+  - Refresh the page, Notice NO redirection to the login page.
 
 ## 🎉 Acknowledgments <a name="acknowledgments"></a>
 
