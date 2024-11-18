@@ -16,6 +16,10 @@
 
 <p align="center">(PoC) Extending PyGeoAPI for Seamless Feature Addition & Modification</p>
 
+
+> [!IMPORTANT]
+> Below describes the ideal implementation, might not reflect the current state of the project.
+
 <!-- SLIDES and pdf are in docs with emojis -->
 - [📝 Pdf Slides of the follwing document](./docs/PyGeoAPI-GlassOnion.pdf)
 
