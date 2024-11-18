@@ -4,7 +4,7 @@ size: 16:9
 theme: am_green
 paginate: true
 headingDivider: [1,2]
-footer: \ *Nitheesh Chandra* *OGC Stack TechSprint 2024* *2024/11/18 (v1.0)*
+footer: \ *Nitheesh Chandra* *OGC Stack TechSprint 2024* *2024/11/18 (v1.0)* *[pygeoapi_glassonion_auth](https://github.com/nitheesh-me/pygeoapi-glassonion-auth/tree/poc)*
 ---
 
 
@@ -20,7 +20,9 @@ footer: \ *Nitheesh Chandra* *OGC Stack TechSprint 2024* *2024/11/18 (v1.0)*
 **Nitheesh Chandra**
 Date：2024/11/18 (v1.0)
 <nitheesh.research@gmail.com>
+[GitHub nitheesh-me/pygeoapi-glassonion-auth](https://github.com/nitheesh-me/pygeoapi-glassonion-auth/tree/poc)
 Based on a PoC developed during OGC Stack TechSprint 2024
+
 
 ## <!--fit-->GlassOnion Framework
 
@@ -200,5 +202,7 @@ Allowing natively support login and OAuth2 authentication for the specific route
 <!-- _class: lastpage -->
 <!-- _footer: "" -->
 ###### With Passion and Dedication
+
+Explore at [GitHub nitheesh-me/pygeoapi-glassonion-auth](https://github.com/nitheesh-me/pygeoapi-glassonion-auth/tree/poc)
 
 *Nitheesh Chandra* | *OGC Stack TechSprint 2024* | *2024/11/18 (v1.0)*
