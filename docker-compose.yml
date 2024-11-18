@@ -1,0 +1,35 @@
+services:
+  # pygeoapi:
+  #   image: geopython/pygeoapi:latest
+
+  #   container_name: pygeoapi
+
+  #   ports:
+  #     - ${PORT}:80
+
+  #   volumes:
+  #     - ./pygeoapi.config.yml:/pygeoapi/local.config.yml
+  #     - ./data:/data # Exercise 1 - First - Ready to pull data from here
+  #     - ./plugins/process/squared.py:/pygeoapi/pygeoapi/process/squared.py  # Exercise 8
+
+  #   # use a different command to start the container
+  #   command: ["pygeoapi", "serve", "--config", "/pygeoapi/local.config.yml"]
+  pygeoapi-secure:
+    # build the image from the Dockerfile in the current directory
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: pygeoapi-secure
+
+    ports:
+      - ${PORT}:80
+
+    env_file:
+      - .env
+
+    volumes:
+      - ./pygeoapi.config.yml:/pygeoapi/local.config.yml
+      - ./pygeoapi_secure:/app/pygeoapi_secure
+      # - ./data:/data # Exercise 1 - First - Ready to pull data from here
+      # - ./plugins/process/squared.py:/pygeoapi/pygeoapi/process/squared.py  # Exercise 8
